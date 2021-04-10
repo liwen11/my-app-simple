@@ -1,6 +1,6 @@
 // ⾼阶组件HOC: 是一个函数，接收一个组件返回一个新组件
 import React, { Component } from 'react';
-
+import { Button } from 'antd';
 const foo = (Cmp) => (props) => {
   console.log(props)
   return (
@@ -39,6 +39,7 @@ class HocPage extends Component {
       <div>
         <p>HocPage</p>
         <Child name={'444'}/>
+        <Button type="primary">Primary Button</Button>
       </div>
     );
   }

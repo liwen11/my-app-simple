@@ -5,10 +5,19 @@ import App from './App';
 import SetStatePage from './SetStatePage'
 import reportWebVitals from './reportWebVitals';
 import HocPage from './pages/HocPage'
+import FormPage from './pages/FormPage'
+import MyFormPage from './pages/MyFormPage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <HocPage />
+    {/* 高阶组件 */}
+    {/* <HocPage /> */}
+
+    {/* 表单组件antd */}
+    {/* <FormPage /> */}
+
+    {/* formCreate */}
+    <MyFormPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
