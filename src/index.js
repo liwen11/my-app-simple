@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import SetStatePage from './SetStatePage'
 import reportWebVitals from './reportWebVitals';
+import HocPage from './pages/HocPage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HocPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
