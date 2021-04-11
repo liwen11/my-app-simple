@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import HocPage from './pages/HocPage'
 import FormPage from './pages/FormPage'
 import MyFormPage from './pages/MyFormPage'
+import DialogPage from './pages/DialogPage'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,8 +17,11 @@ ReactDOM.render(
     {/* 表单组件antd */}
     {/* <FormPage /> */}
 
-    {/* formCreate */}
-    <MyFormPage />
+    {/* 自己实现一个formCreate */}
+    {/* <MyFormPage /> */}
+
+    {/* 弹窗组件 */}
+    <DialogPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

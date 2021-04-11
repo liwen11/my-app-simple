@@ -21,3 +21,13 @@ code {
   padding: 10px;
   border: 1px solid green;
 }
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: 1px solid;
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+}
