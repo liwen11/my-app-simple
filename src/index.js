@@ -8,6 +8,7 @@ import HocPage from './pages/HocPage'
 import FormPage from './pages/FormPage'
 import MyFormPage from './pages/MyFormPage'
 import DialogPage from './pages/DialogPage'
+import Context from './pages/context/Context'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,7 +22,10 @@ ReactDOM.render(
     {/* <MyFormPage /> */}
 
     {/* 弹窗组件 */}
-    <DialogPage />
+    {/* <DialogPage /> */}
+
+    {/* context */}
+    <Context></Context>
   </React.StrictMode>,
   document.getElementById('root')
 );
