@@ -9,6 +9,10 @@ import FormPage from './pages/FormPage'
 import MyFormPage from './pages/MyFormPage'
 import DialogPage from './pages/DialogPage'
 import Context from './pages/context/Context'
+import ReduxPage from './pages/ReduxPage'
+import store from './store/index'
+import {Provider} from 'react-redux'
+import RouterPage from './pages/Router/RouterPage';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,7 +29,15 @@ ReactDOM.render(
     {/* <DialogPage /> */}
 
     {/* context */}
-    <Context></Context>
+    {/* <Context></Context> */}
+
+    {/* Redux */}
+    {/* <Provider store={store}>
+      <ReduxPage num={3}/>
+    </Provider> */}
+
+    {/* react-router */}
+    <RouterPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
