@@ -37,7 +37,7 @@ ReactDOM.render(
     </Provider> */}
 
     {/* react-router */}
-    <RouterPage />
+      <RouterPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

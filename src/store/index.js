@@ -12,5 +12,17 @@ function countReducer(state = 0, action) {
       return state
   }
 }
-const store = createStore(countReducer, applyMiddleware(thunk))
+
+function loginReducer(state = false, action) {
+  switch(action.type) {
+    case 'LOGIN': 
+      return true;
+    case 'LOGOUT':
+      return false
+    default: 
+      return false
+  }
+}
+
+const store = createStore(loginReducer, applyMiddleware(thunk))
 export default store

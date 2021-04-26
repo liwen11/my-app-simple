@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
 
 class LoginPage extends Component {
   constructor(props) {
@@ -6,12 +7,29 @@ class LoginPage extends Component {
     this.state = {  };
   }
   render() {
+    console.log(this.props)
+    const {handleLogin, isLogin} = this.props
     return (
       <>
-        <h3>LoginPage</h3>
+        <h3>LoginPage, {String(isLogin)}</h3>
+        <button onClick={handleLogin}>登录</button>
       </>
     );
   }
 }
-
-export default LoginPage;
+const mapStateToProps = (state) => {
+  return {
+    isLogin: state
+  }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    handleLogin: () => {
+      dispatch({type: 'LOGIN'})
+    }
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginPage);
