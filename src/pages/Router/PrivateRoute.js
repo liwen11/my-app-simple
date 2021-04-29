@@ -12,7 +12,10 @@ class PrivateRoute extends Component {
     if (isLogin) {
       return <Route path={path} component={component}></Route>
     } else {
-      return '404'
+      return <Redirect to={{
+        pathname: '/login',
+        state: {redirect: path}
+      }}></Redirect>
     }
   }
 }

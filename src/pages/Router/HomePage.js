@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { useParams } from 'react-router';
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -15,3 +15,12 @@ class HomePage extends Component {
 }
 
 export default HomePage;
+// function HomePage() {
+//   console.log(useParams())
+//   return (
+//     <>
+//       <h3>HomePage</h3>
+//     </>
+//   )
+// }
+// export default HomePage

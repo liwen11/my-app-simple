@@ -13,6 +13,7 @@ import ReduxPage from './pages/ReduxPage'
 import store from './store/index'
 import {Provider} from 'react-redux'
 import RouterPage from './pages/Router/RouterPage';
+import IndexPage from './pages/Router/IndexPage';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -37,7 +38,7 @@ ReactDOM.render(
     </Provider> */}
 
     {/* react-router */}
-      <RouterPage />
+    <RouterPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

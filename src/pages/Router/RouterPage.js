@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
-import { IndexRoute } from 'react-router'
+import { BrowserRouter, Link, Route, Switch, NavLink } from 'react-router-dom'
 import HomePage from './HomePage';
 import LoginPage from './LoginPage';
 import UserPage from './UserPage';
@@ -14,17 +13,18 @@ class RouterPage extends Component {
     this.state = {};
   }
   render() {
+    console.log(this)
     return (
       <>
         <h3>RouterPage</h3>
         <Provider store={store}>
           <BrowserRouter>
-            <Link to='/'>home</Link>
-            <Link to='/login'>login</Link>
-            <Link to='/user'>user</Link>
-            <Link to='/aaa'>aaa</Link>
+            <NavLink to='/' exact activeClassName='active'>home</NavLink>
+            <NavLink to='/login' activeClassName='active'>login</NavLink>
+            <NavLink to='/user' activeClassName='active'>user</NavLink>
+            <NavLink to='/aaa' activeClassName='active'>aaa</NavLink>
             <Switch>
-              {/* <IndexRoute component={HomePage} /> */}
+              {/* <Route path="/:id" children={<HomePage />} /> */}
               <Route exact path='/' component={HomePage}></Route>
               <Route path='/login' component={LoginPage}></Route>
               <PrivateRoute path='/user' component={UserPage}></PrivateRoute>
